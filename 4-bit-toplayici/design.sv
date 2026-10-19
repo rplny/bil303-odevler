@@ -25,3 +25,6 @@ module toplayici_4bit (
     tam_toplayici bit3 ( .a(sayi1[3]), .b(sayi2[3]), .cin(c3),         .sum(toplam[3]), .cout(elde_cikis) );
 
 endmodule
+
+// EDA Playground Simülasyon Linki:
+// https://edaplayground.com/x/i2rZ
