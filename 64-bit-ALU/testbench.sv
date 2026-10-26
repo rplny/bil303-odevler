@@ -14,3 +14,4 @@ module alu64 (
         endcase
     end
 endmodule
+//https://www.edaplayground.com/x/iACA Playground EDA linki
