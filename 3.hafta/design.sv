@@ -35,6 +35,56 @@ module ripple4 (
     assign cout = tasima[4];
 endmodule
 
+module and_kapisi (
+    input  logic x,
+    input  logic y,
+    output logic z
+);
+    assign z = x & y;
+endmodule
+
+module or_kapisi (
+    input  logic x,
+    input  logic y,
+    output logic z
+);
+    assign z = x | y;
+endmodule
+
+module and4 (
+    input  logic [3:0] a,
+    input  logic [3:0] b,
+    output logic [3:0] y
+);
+    genvar i;
+    generate
+        for (i = 0; i < 4; i = i + 1) begin : bit
+            and_kapisi kapi (
+                .x(a[i]),
+                .y(b[i]),
+                .z(y[i])
+            );
+        end
+    endgenerate
+endmodule
+
+module or4 (
+    input  logic [3:0] a,
+    input  logic [3:0] b,
+    output logic [3:0] y
+);
+    genvar i;
+    generate
+        for (i = 0; i < 4; i = i + 1) begin : bit
+            or_kapisi kapi (
+                .x(a[i]),
+                .y(b[i]),
+                .z(y[i])
+            );
+        end
+    endgenerate
+endmodule
+
 module alu4 (
     input  logic [3:0] a,
     input  logic [3:0] b,
@@ -57,8 +107,17 @@ module alu4 (
         .toplam(cikarma_sonuc), .cout(cikarma_elde)
     );
 
-    assign and_sonuc = a & b;
-    assign or_sonuc  = a | b;
+    and4 ve_kapilari (
+        .a(a),
+        .b(b),
+        .y(and_sonuc)
+    );
+
+    or4 veya_kapilari (
+        .a(a),
+        .b(b),
+        .y(or_sonuc)
+    );
 
     always_comb begin
         unique case (secim)
