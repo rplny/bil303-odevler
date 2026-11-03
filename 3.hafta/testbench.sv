@@ -70,4 +70,3 @@ module tb_alu4;
         $finish;
     end
 endmodule
-//https://www.edaplayground.com/x/iACA
