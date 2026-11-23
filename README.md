@@ -7,4 +7,4 @@ Rahile Pelin Yakar
 - 2.odev: 4 bit toplayici
 - 3.odev: 4 bit ALU
 - 4.odev: 5 bit ALU
-- 9.odev: kayan nokta sinifi
+- 5.odev: kayan nokta sinifi
