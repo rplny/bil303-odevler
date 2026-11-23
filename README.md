@@ -3,7 +3,8 @@
 BIL 303
 Rahile Pelin Yakar
 
-- 1.hafta: 8 bit, 4'ten 1'e mux
-- 2.hafta: 4 bit toplayıcı
-- 3.hafta: 4 bit ALU
-- 4.hafta: 5 bit ALU
+- 1.odev: 8 bit, 4'ten 1'e mux
+- 2.odev: 4 bit toplayici
+- 3.odev: 4 bit ALU
+- 4.odev: 5 bit ALU
+- 9.odev: kayan nokta sinifi
